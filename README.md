@@ -31,7 +31,9 @@ npm install
 firebase init
 ```
 
-...then start [Rollup](https://rollupjs.org):
+...add your firebase config to `src/firebase_config.ts`...
+
+...then start [Rollup](https://rollupjs.org).
 
 ```bash
 npm run dev
@@ -44,6 +46,8 @@ To run the app locally you will need to have the firebase emulators installed. O
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
+Your app will be listening on all hosts by default, meaning it can be accessed by other devices on your network. To disable this behavior, change the hosting settings in `firebase.json`.
+
 If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommend installing the official extension [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode). If you are using other editors you may need to install a plugin in order to get syntax highlighting and intellisense.
 
 
@@ -54,6 +58,8 @@ To create an optimised version of the app:
 ```bash
 npm run build
 ```
+
+If you are using firebase functions, make sure to run this command in your functions directory as well.
 
 
 ## Deploying to the web
