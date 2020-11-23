@@ -1,5 +1,7 @@
-/node_modules/
+node_modules/
 /public/build/
+public/**/*.js
+public/**/*.js.map
 
 .DS_Store
 /*.log

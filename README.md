@@ -9,7 +9,7 @@ This is a project template for [Svelte](https://svelte.dev) apps built using Rol
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit ShadowfeindX/svelte-rollup-scss-typescript-firebase svelte-app
+degit ShadowfeindX/svelte-rollup-scss-typescript-firebase svelte-app
 cd svelte-app
 ```
 
@@ -22,7 +22,7 @@ Install the dependencies...
 
 ```bash
 cd svelte-app
-npm install
+yarn install
 ```
 
 ...initialize [Firebase](https://firebase.google.com) with your project details...
@@ -33,18 +33,20 @@ firebase init
 
 ...add your firebase config to `src/firebase_config.ts`...
 
-...then start [Rollup](https://rollupjs.org).
+...then start the compiler.
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 
 ## Running in dev mode
 
-To run the app locally you will need to have the firebase emulators installed. Once you have done that you can start the emulator suite by running `firebase emulators:start`.
+To run the app locally you will need to have the firebase emulators installed. Once you have done that you can start the emulator suite by running `yarn start`.
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src` and save it. The browser should reload and show your changes.
+
+The service worker and any other webworkers reside in `service`. Your cloud functions reside in `functions`. The compiler will automatically run whenever you change these files as well.
 
 Your app will be listening on all hosts by default, meaning it can be accessed by other devices on your network. To disable this behavior, change the hosting settings in `firebase.json`.
 
@@ -56,12 +58,10 @@ If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommen
 To create an optimised version of the app:
 
 ```bash
-npm run build
+yarn build
 ```
-
-If you are using firebase functions, make sure to run this command in your functions directory as well.
 
 
 ## Deploying to the web
 
-Once you are satisfied with your application, you can deploy it to firebase by running `firebase deploy`.
+Once you are satisfied with your application, you can deploy it to firebase by running `yarn deploy`.
