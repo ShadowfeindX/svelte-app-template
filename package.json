@@ -6,7 +6,7 @@
     "validate": "svelte-check",
     "start": "firebase emulators:start",
     "build": "npm-run-all service-build app-build functions-build",
-    "dev": "concurrently --kill-others \"yarn app-dev\" \"yarn service-dev\" \"yarn functions-dev\" \"yarn start\"",
+    "dev": "concurrently --kill-others \"yarn app-dev\" \"yarn service-dev\" \"yarn functions-dev\"",
     "deploy": "firebase deploy",
     "app-build": "rollup -c",
     "app-dev": "rollup -c -w",
